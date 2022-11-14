@@ -1,0 +1,91 @@
+.location-lpa-d {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.web-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.link-div {
+  display: flex;
+  align-items: center;
+  width: 70px;
+  justify-content: space-between;
+  font-size: 20px;
+  color: #4f46e5;
+}
+.anchor {
+  text-decoration: none;
+}
+.life-div {
+  display: flex;
+}
+.similar-bg {
+  background-color: black;
+}
+@media screen and (max-width: 576px) {
+  .similar-bg {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+}
+.job-card-detailed {
+  color: white;
+  background-color: #7e858e;
+  border-radius: 10px;
+  padding: 50px;
+  margin: 20px;
+}
+.logo-cm {
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+}
+.failure-div-similar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.life-img {
+  margin-left: 10px;
+}
+@media screen and (max-width: 576px) {
+  .life-img {
+    width: 200px;
+  }
+}
+.similar-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+@media screen and (max-width: 576px) {
+  .similar-list {
+    margin-left: 55px;
+  }
+}
+.skills-lists {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: flex-start;
+}
+.similar-head {
+  color: white;
+  margin-left: 20px;
+}
+.icons-flex {
+  display: flex;
+  align-items: center;
+}
+.fill {
+  color: yellow;
+}

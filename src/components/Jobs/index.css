@@ -1,0 +1,33 @@
+/* .jobs-bg {
+  height: 100vh;
+  background-color: black;
+}
+.jobs-container {
+  display: flex;
+}
+@media screen and (max-width: 576px) {
+  .jobs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     width: 100%;
+    margin-left: 0px;
+  }
+}
+.left {
+  margin-right: 15px;
+  width: 35%;
+}
+
+.right {
+  width: 65%;
+}
+@media screen and (min-width: 767px) {
+  .left {
+    min-width: 40%;
+  }
+  .right {
+    max-width: 60%;
+    margin-left: 20px;
+  }
+}  */
