@@ -1,5 +1,5 @@
 .location-lpa-d {
-  width: 300px;
+  /* width: 300px; */
   display: flex;
   justify-content: space-between;
 }
@@ -19,9 +19,7 @@
 .anchor {
   text-decoration: none;
 }
-.life-div {
-  display: flex;
-}
+
 .similar-bg {
   background-color: black;
 }
@@ -29,15 +27,14 @@
   .similar-bg {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
   }
 }
 .job-card-detailed {
   color: white;
   background-color: #7e858e;
   border-radius: 10px;
-  padding: 50px;
-  margin: 20px;
+  padding: 20px;
+  margin: 10px;
 }
 .logo-cm {
   height: 100px;
@@ -52,12 +49,17 @@
   padding-bottom: 30px;
   padding-top: 30px;
 }
+.life-div {
+  display: flex;
+  justify-content: space-between;
+}
 .life-img {
   margin-left: 10px;
 }
 @media screen and (max-width: 576px) {
   .life-img {
-    width: 200px;
+    width: 180px;
+    margin-right: 10px;
   }
 }
 .similar-list {
@@ -68,15 +70,21 @@
 }
 @media screen and (max-width: 576px) {
   .similar-list {
-    margin-left: 55px;
+    margin-left: -30px;
   }
 }
+
 .skills-lists {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   align-items: flex-start;
+}
+@media screen and (max-width: 576px) {
+  .skills-lists {
+    margin-left: -40px;
+  }
 }
 .similar-head {
   color: white;
@@ -87,5 +95,9 @@
   align-items: center;
 }
 .fill {
-  color: yellow;
+  color: gold;
+  height: 18px;
+  width: 18px;
+  margin-bottom: 2px;
+  margin-right: 4px;
 }

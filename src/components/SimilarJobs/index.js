@@ -1,5 +1,6 @@
 import {BsFillBagFill} from 'react-icons/bs'
 import {GoLocation} from 'react-icons/go'
+import {AiFillStar} from 'react-icons/ai'
 import './index.css'
 
 const SimilarJobs = props => {
@@ -25,10 +26,7 @@ const SimilarJobs = props => {
         <div>
           <p>{title}</p>
           <div className="rating-container">
-            <img
-              alt="star"
-              src="https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png"
-            />
+            <AiFillStar className="fill" />
             <p>{rating}</p>
           </div>
         </div>

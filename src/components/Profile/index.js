@@ -55,19 +55,17 @@ class Profile extends Component {
     const {profileImageUrl, name, shortBio} = updatedProfile
 
     return (
-      <div className="jjj">
-        <div className="profile-bg">
-          <img src={profileImageUrl} alt="profile" />
-          <h1 className="profile-name">{name}</h1>
-          <p>{shortBio}</p>
-        </div>
+      <div className="profile-bg">
+        <img src={profileImageUrl} alt="profile" />
+        <h1 className="profile-name">{name}</h1>
+        <p>{shortBio}</p>
       </div>
     )
   }
 
   renderLoadingView = () => (
     //   testid="loader"
-    <div testid="loader" className="loader-container">
+    <div className="loader-container">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )

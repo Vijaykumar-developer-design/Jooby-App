@@ -71,11 +71,10 @@ class ActiveJobList extends Component {
   getAllJobs = async () => {
     const {employmentType, salaryRange, searchInput} = this.state
     const types = employmentType.join()
-    console.log(types)
+
     this.setState({requestStatus: ListStatus.inProgress})
     const jwtToken = Cookies.get('jwt_token')
     const url = `https://apis.ccbp.in/jobs?employment_type=${types}&minimum_package=${salaryRange}&search=${searchInput}`
-
     const options = {
       method: 'GET',
       headers: {
@@ -138,7 +137,7 @@ class ActiveJobList extends Component {
                       alt="company logo"
                     />
                     <div>
-                      <h1>{each.title}</h1>
+                      <h1 className="job-card-heading">{each.title}</h1>
                       <div className="rating-container">
                         <AiFillStar className="fill" />
                         <p>{each.rating}</p>
@@ -214,7 +213,7 @@ class ActiveJobList extends Component {
   renderLoadingView = () => (
     //   testid="loader"
 
-    <div testid="loader" className="loader-container">
+    <div className="loader-container">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
@@ -283,7 +282,7 @@ class ActiveJobList extends Component {
                 type="search"
               />
               <button
-                testid="searchButton"
+                // testid="searchButton"
                 onClick={this.OnClickSearchJob}
                 className="search-btn"
                 type="button"

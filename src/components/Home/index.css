@@ -11,17 +11,28 @@
 }
 .head {
   color: white;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: bold;
 }
+@media screen and (max-width: 576px) {
+  .head {
+    width: 300px;
+    font-size: 30px;
+  }
+}
 .content {
-  width: 500px;
   margin-top: 50px;
   margin-left: 50px;
 }
 .para {
   color: #f1f5f9;
   font-size: 30px;
+}
+@media screen and (max-width: 576px) {
+  .para {
+    width: 300px;
+    font-size: 25px;
+  }
 }
 .find-jobs {
   background-color: #6366f1;

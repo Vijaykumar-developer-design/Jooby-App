@@ -133,19 +133,19 @@ class DetailedView extends Component {
               </div>
             </div>
           </div>
-          <div className="location-lpa">
-            <div className="location-lpa-d">
-              <div className="icons-flex">
-                <GoLocation className="icons" />
-                <p>{location}</p>
-              </div>
-              <div className="icons-flex">
-                <BsFillBagFill className="icons" />
-                <p>{employmentType}</p>
-              </div>
+
+          <div className="location-lpa-d">
+            <div className="icons-flex">
+              <GoLocation className="icons" />
+              <p>{location}</p>
+            </div>
+            <div className="icons-flex">
+              <BsFillBagFill className="icons" />
+              <p>{employmentType}</p>
             </div>
             <p>{packageLpa} </p>
           </div>
+
           <hr />
           <div className="web-link">
             <h1>Description</h1>
@@ -220,7 +220,7 @@ class DetailedView extends Component {
 
   renderLoadindView = () => (
     //   testid="loader"
-    <div testid="loader" className="loader-container">
+    <div className="loader-container">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )

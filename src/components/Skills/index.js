@@ -7,7 +7,7 @@ const Skill = props => {
   return (
     <li key={skillName} className="skills-div">
       <img className="skill-img" src={skillImgUrl} alt={skillName} />
-      <h1>{skillName}</h1>
+      <h1 className="skills-head">{skillName}</h1>
     </li>
   )
 }

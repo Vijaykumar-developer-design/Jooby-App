@@ -1,15 +1,19 @@
 .nav-bar {
   background-color: #475569;
   padding: 10px;
-}
-.nav-items {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .nav-img {
   height: 50px;
   width: 200px;
+}
+@media screen and (max-width: 576px) {
+  .nav-img {
+    width: 150px;
+  }
 }
 .link {
   text-decoration: none;
@@ -26,11 +30,21 @@
   font-weight: bold;
   padding: 10px;
   border: none;
-  font-size: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
+  font-size: 20px;
   cursor: pointer;
+}
+@media screen and (max-width: 576px) {
+  .log-out {
+    font-size: 15px;
+    padding: 8px;
+    font-weight: 800;
+  }
 }
 .list-home {
   list-style-type: none;
+}
+@media screen and (max-width: 576px) {
+  .list-home {
+    font-size: 15px;
+  }
 }
