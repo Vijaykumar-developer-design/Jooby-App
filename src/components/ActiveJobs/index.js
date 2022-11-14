@@ -70,11 +70,11 @@ class ActiveJobList extends Component {
 
   getAllJobs = async () => {
     const {employmentType, salaryRange, searchInput} = this.state
-    // const types = employmentType.from(new Set(employmentType))
-    // console.log(types)
+    const types = employmentType.join()
+    console.log(types)
     this.setState({requestStatus: ListStatus.inProgress})
     const jwtToken = Cookies.get('jwt_token')
-    const url = `https://apis.ccbp.in/jobs?employment_type=${employmentType.join()}&minimum_package=${salaryRange}&search=${searchInput}`
+    const url = `https://apis.ccbp.in/jobs?employment_type=${types}&minimum_package=${salaryRange}&search=${searchInput}`
 
     const options = {
       method: 'GET',
@@ -214,10 +214,7 @@ class ActiveJobList extends Component {
   renderLoadingView = () => (
     //   testid="loader"
 
-    <div
-      //  testid="loader"
-      className="loader-container"
-    >
+    <div testid="loader" className="loader-container">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
@@ -238,12 +235,22 @@ class ActiveJobList extends Component {
   }
 
   changeEmploymentType = value => {
-    this.setState(
-      prevState => ({
-        employmentType: [...prevState.employmentType, value],
-      }),
-      this.getAllJobs,
-    )
+    const {values, checkStatus} = value
+    if (checkStatus === true) {
+      this.setState(
+        prevState => ({
+          employmentType: [...prevState.employmentType, values],
+        }),
+        this.getAllJobs,
+      )
+    } else {
+      const {employmentType} = this.state
+      const index = employmentType.indexOf(values)
+      if (index > -1) {
+        employmentType.splice(index, 1)
+      }
+      this.setState({employmentType}, this.getAllJobs)
+    }
   }
 
   changeSalaryRange = salary => {
@@ -276,7 +283,7 @@ class ActiveJobList extends Component {
                 type="search"
               />
               <button
-                // testid="searchButton"
+                testid="searchButton"
                 onClick={this.OnClickSearchJob}
                 className="search-btn"
                 type="button"

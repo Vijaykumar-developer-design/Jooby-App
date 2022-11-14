@@ -4,7 +4,9 @@ const Employment = props => {
   const renderTypeOfEmployment = () => {
     const {employmentTypesList, changeEmploymentType} = props
     const changeEmployment = event => {
-      changeEmploymentType(event.target.value)
+      const values = event.target.value
+      const checkStatus = event.target.checked
+      changeEmploymentType({values, checkStatus})
     }
     return (
       <div className="em-types">
@@ -12,14 +14,16 @@ const Employment = props => {
         <h1 className="em-type">Type of Employment</h1>
         <ul className="ul-list">
           {employmentTypesList.map(each => (
-            <li className="list-ele" key={each.employmentTypeId}>
+            <li
+              className="list-ele"
+              onChange={changeEmployment}
+              key={each.employmentTypeId}
+            >
               <input
-                onChange={changeEmployment}
                 value={each.employmentTypeId}
                 className="type-input"
                 type="checkbox"
                 id={each.employmentTypeId}
-                // name={each.employmentTypeId}
               />
               <label htmlFor={each.employmentTypeId}>{each.label}</label>
             </li>

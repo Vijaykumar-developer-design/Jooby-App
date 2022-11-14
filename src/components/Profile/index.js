@@ -67,10 +67,7 @@ class Profile extends Component {
 
   renderLoadingView = () => (
     //   testid="loader"
-    <div
-      //  testid="loader"
-      className="loader-container"
-    >
+    <div testid="loader" className="loader-container">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )

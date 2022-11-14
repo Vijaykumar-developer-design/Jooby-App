@@ -77,7 +77,6 @@ class DetailedView extends Component {
         description: data.job_details.life_at_company.description,
         imageUrl: data.job_details.life_at_company.image_url,
       }
-      //   console.log(companyDetails)
 
       this.setState({
         presentJob: updatedDetails,
@@ -162,9 +161,9 @@ class DetailedView extends Component {
               </div>
             </a>
           </div>
-
           <p>{jobDescription}</p>
           <h1>Skills</h1>
+
           <ul className="skills-lists">
             {skills.map(each => (
               <Skill skillList={each} key={each.skillName} />
@@ -221,10 +220,7 @@ class DetailedView extends Component {
 
   renderLoadindView = () => (
     //   testid="loader"
-    <div
-      // testid="loader"
-      className="loader-container"
-    >
+    <div testid="loader" className="loader-container">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
